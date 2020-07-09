@@ -1,0 +1,148 @@
+:root {
+    --white: #FEFEFE;
+    --purple: #2E1D5B;
+    --green: #68E5AD;
+}
+
+@font-face {
+    font-family: Biko;
+    src: url('../fonts/Biko_Regular.otf');
+}
+
+@font-face {
+    font-family: Biko;
+    src: url('../fonts/Biko_Black.otf');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Biko, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 8vw;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 10vw;
+}
+
+.menu__items {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.menu__items a {
+    text-decoration: none;
+}
+
+.social-media__icons {
+    color: var(--purple);
+    width: 20px;
+    padding: 0 5px;
+}
+
+.vip {
+    background: var(--green);
+    text-transform: uppercase;
+    padding: 5px 50px 10px 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    justify-self: end;
+}
+
+.vip__items {
+    background: inherit;
+    padding: 0px 3px;
+}
+
+.vip__items--white {
+    color: var(--white);
+    font-size: 1.8em;
+}
+
+.home {
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.home__mockups {
+    width: 50vw;
+}
+
+.home__title {
+    font-weight: bold;
+    color: var(--purple);
+    font-size: 2.5rem;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+.home__title--sub-title {
+    color: var(--green);
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+
+.home__paragraph {
+    width: 75%;
+    text-align: justify;
+}
+
+.features {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--green);
+    padding: 40px 50px;
+}
+
+.features__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features__icon {
+    width: 60px;
+}
+
+.features__desc {
+    padding-left: 20px;
+    text-transform: uppercase;
+    color: var(--purple);
+    width: 200px;
+}
+
+.call-to-action {
+    text-align: center;
+    width: 100%;
+    color: var(--purple);
+}
+
+.call-to-action__button {
+    border: none;
+    text-transform: uppercase;
+    background: var(--purple);
+    color: var(--white);
+    padding: 15px 30px;
+    margin: 20px;
+    border-radius: 30px;
+}
