@@ -13,9 +13,9 @@
 
 <body>
     <header class="header">
-        <img src="images/logo-hops.png" alt="Logotipo de hops latam" width="150px">
+        <img class="header__logo" src="images/logo-hops.png" alt="Logotipo de hops latam" width="150px">
         <nav>
-            <ul class="menu">
+            <ul class="header__menu">
                 <li class="menu__items"><a href="">Inicio</a></li>
                 <li class="menu__items"><a href="">Servicios</a></li>
                 <li class="menu__items"><a href="">¿Por que HOPS?</a></li>
@@ -29,10 +29,10 @@
             <i class="social-media__icons" data-feather="instagram"></i>
             <i class="social-media__icons" data-feather="linkedin"></i>
         </div>
-        <div class="vip">
+        <a class="vip" href="https://app.hopslatam.com/">
             <span class="vip__items">Miembros</span>
             <span class="vip__items vip__items--white">></span>
-        </div>
+        </a>
     </header>
     <main>
         <section class="home">
@@ -73,7 +73,46 @@
             <button class="call-to-action__button">Accede a una prueba gratis</button><br>
             <span>No somos un CRM ni un ERP/ Complementamos tu software de gestión</span>
         </div>
-        <section id="services"></section>
+        <section class="services">
+            <h2 class="services__title services__title--main">Servicios</h2>
+            <img class="separator" src="images/separator.jpg" alt="separador de titulo">
+            <div class="services__container">
+                <div class="services__card">
+                    <img class="services__icon" src="images/cardio.jpg" alt="" class="services__icon">
+                    <h3 class="services__title">ROTACIÓN Y CONTROL DE PACIENTES/HOSP. Y UCI</h3>
+                    <p class="services__paragraph">Control constante de la rotación de camas hospitalarias y
+                        trazabilidad de la información del paciente, especifica y general.</p>
+                </div>
+                <div class="services__card">
+                    <img class="services__icon" src="images/stats.jpg" alt="" class="services__icon">
+                    <h3 class="services__title">ANÁLISIS DE DATOS</h3>
+                    <p class="services__paragraph">Indicadores que te mantienen informado sobre la programación, ocupación, retrasos y rentabilidad de tus procesos.</p>
+                </div>
+                <div class="services__card">
+                    <img class="services__icon" src="images/app.jpg" alt="" class="services__icon">
+                    <h3 class="services__title">APP</h3>
+                    <span class="services__helper">(Aplicación movil)</span>
+                    <p class="services__paragraph">Mantén siempre la información al alcance de tus manos en tiempo real.</p>
+                </div>
+                <div class="services__card">
+                    <img class="services__icon services__icon--doble" src="images/calendar-inject.jpg" alt="" class="services__icon">
+                    <h3 class="services__title">ADMIN. DE SALAS Y VPA</h3>
+                    <span class="services__helper">(Valoración Preanestésica)</span>
+                    <p class="services__paragraph">Optimiza el uso de tus salas de cirugía, conecta la valoración pre anestésica del paciente en un mismo lugar y en tiempo real.</p>
+                </div>
+                <div class="services__card">
+                    <img class="services__icon services__icon--doble" src="images/bell.jpg" alt="" class="services__icon">
+                    <h3 class="services__title">CHAT Y NOTIFICACIONES DE ESTADO</h3>
+                    <p class="services__paragraph">-Contamos con un canal interno que permite la comunicación segura. -Notificamos las novedades de procesos internos.</p>
+                </div>
+                <div class="services__card">
+                    <img class="services__icon" src="images/api.jpg" alt="" class="services__icon">
+                    <h3 class="services__title">INTEROPERABILIDAD/API</h3>
+                    <span class="services__helper">(Application Programming Interface)</span>
+                    <p class="services__paragraph">Tenemos las herramientas para realizar la integración de datos eficientemente todo en tiempo real.</p>
+                </div>
+            </div>
+        </section>
         <section id="why"></section>
         <section class="pricing"></section>
         <section class="faq"></section>
