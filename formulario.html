@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Health HꝹPS</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+ <script>
+    function contacto(){
+   
+   var bandera=validarEmail(document.getElementById("email").value)
+   
+   
+   if(bandera==true){
+   
+     if(document.getElementById("nombre").value!='' && document.getElementById("apellido").value!='' && document.getElementById("cargo").value!='' && document.getElementById("organizacion").value!='' && document.getElementById("telefono").value!='' && document.getElementById("email").value!='' )
+    {
+
+      console.log(document.getElementById("nombre").value)
+      console.log(document.getElementById("apellido").value)
+      console.log(document.getElementById("cargo").value)
+      console.log(document.getElementById("organizacion").value)
+      console.log(document.getElementById("telefono").value)
+      console.log(document.getElementById("email").value)
+     var arreglo={
+   
+   nombre:document.getElementById("nombre").value,
+   apellido:document.getElementById("apellido").value,
+   cargo:document.getElementById("cargo").value,
+   organizacion:document.getElementById("organizacion").value,
+   telefono:document.getElementById("telefono").value,
+   email:document.getElementById("email").value,
+   comentarios:document.getElementById("comentarios").value
+   
+   }
+
+   console.log(arreglo);
+   console.log(JSON.stringify(arreglo))
+   
+   fetch("http://www.pruebashopslatam.com/Hops-Api/Eventos/Sistem/Insert_contacto.php", {
+           method: "POST",
+           body: JSON.stringify(arreglo)
+         })
+           .then(response => response.json())
+           .then(res => {
+             
+               swal(res.message, res.body, res.foot).then(value => {
+               window.close()
+              });
+               
+           
+             
+           })
+           .catch(error => {
+             reject(error);
+           });
+   
+     }else
+     {
+       swal('Error', 'Complete todos los datos', 'error')
+      }
+   }
+   else if(document.getElementById("email").value==''){
+   
+     swal('Error', 'Ingrese correo electronico', 'error')
+   
+   }else{
+     
+     swal('Error', 'Ingrese correo electronico valido', 'error')
+   
+     
+   }
+    }
+   function validarEmail(valor) {
+     if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+      return true;
+     } else {
+      return false;  }
+   }
+   
+   </script>
+   <script>
+      $(document).ready(function()
+      {
+         $("#contact-modal").modal("show");
+	
+      });
+    </script>
+<div id="contact-modal" class="modal fade" role="dialog" data-backdrop='static' data-keyboard='false' >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Contacto</h5>
+        </div>
+        <form id="miForm" action="action_page.php">
+          <div class="modal-body">				
+            <div class="form-group">
+              <label >Nombre</label>
+              <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label >Apellidos</label>
+              <input type="text" id="apellido" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Cargo</label>
+              <input type="text" id="cargo" class="form-control" required>
+            </div>			
+            <div class="form-group">
+              <label>Organización</label>
+              <input type="text" id="organizacion" class="form-control" required>
+            </div>					
+            <div class="form-group">
+              <label for="message">Telefono</label>
+              <input type="text" id="telefono" class="form-control" required>  
+            </div>			
+            <div class="form-group">
+              <label for="message">Correo Electronico</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>	
+            <div class="form-group">
+              <label for="message">Comentarios</label>
+              <textarea id="comentarios" size="30" class="form-control" required></textarea>
+            </div>			
+            
+          </div>
+          </form>
+          <div class="modal-footer">					
+            
+            <input type="submit" class="btn btn-success" id="submit" onclick="contacto()">
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  </html>
