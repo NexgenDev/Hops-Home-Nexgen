@@ -61,20 +61,38 @@ body {
 
 .menu_link {
     text-decoration: none;
+    transition: color 150ms ease-in-out;
+}
+
+.menu_link:hover {
+    color: var(--green);
 }
 
 .menu_link--green {
     color: var(--green);
 }
 
+.menu_link--green:hover {
+    color: var(--white);
+}
+
 .social-media__icons {
     color: var(--purple);
     width: 20px;
     padding: 0 5px;
+    transition: color 150ms ease-in-out;
+}
+
+.social-media__icons:hover {
+    color: var(--green);
 }
 
 .social-media__icons--green {
     color: var(--green);
+}
+
+.social-media__icons--green:hover {
+    color: var(--white);
 }
 
 .vip {
