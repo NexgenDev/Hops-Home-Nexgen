@@ -134,8 +134,8 @@ body {
 
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
-    right: 10px;
+    bottom: 30px;
+    right: 0;
     border-radius: 50px;
 }
 
