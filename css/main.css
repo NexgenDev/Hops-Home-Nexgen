@@ -31,9 +31,18 @@ body {
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    background: var(--white);
     width: 100%;
     box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.10);
+    transition: background 500ms ease-in-out;
+    min-height: 102px;
+}
+
+.header--white {
+    background: var(--white);
+}
+
+.header--purple {
+    background-color: var(--purple);
 }
 
 .header__logo {
@@ -45,19 +54,27 @@ body {
     padding-left: 10vw;
 }
 
-.menu__items {
+.menu__item {
     display: inline-block;
     padding: 0 10px;
 }
 
-.menu__items a {
+.menu_link {
     text-decoration: none;
+}
+
+.menu_link--green {
+    color: var(--green);
 }
 
 .social-media__icons {
     color: var(--purple);
     width: 20px;
     padding: 0 5px;
+}
+
+.social-media__icons--green {
+    color: var(--green);
 }
 
 .vip {
@@ -236,4 +253,4 @@ body {
 .aws-banner {
     align-self: flex-start;
     width: 200px;
-}}
+}
