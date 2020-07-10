@@ -115,6 +115,13 @@ body {
     text-align: justify;
 }
 
+.whatapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    border-radius: 50px;
+}
+
 .features {
     display: flex;
     width: 100%;
@@ -225,3 +232,8 @@ body {
 .services__icon--doble {
     width: 150px;
 }
+
+.aws-banner {
+    align-self: flex-start;
+    width: 200px;
+}}
