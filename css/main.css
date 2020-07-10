@@ -132,7 +132,7 @@ body {
     text-align: justify;
 }
 
-.whatapp-btn {
+.whatsapp-btn {
     position: fixed;
     bottom: 20px;
     right: 10px;
@@ -206,6 +206,7 @@ body {
     justify-items: center;
     width: 55%;
     padding-top: 30px;
+    row-gap: 10px;
 }
 
 .services__title {
@@ -215,7 +216,11 @@ body {
     font-weight: 500;
 }
 
-.services__title--main {
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--purple);
+    font-weight: 500;
     font-size: 3rem;
     font-weight: bold;
 }
@@ -253,4 +258,69 @@ body {
 .aws-banner {
     align-self: flex-start;
     width: 200px;
+}
+
+.why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.why-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/city-green.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px 100px;
+}
+
+.why-container__image {
+    width: 50vw ;
+}
+
+.why-container__title {
+    color: var(--white);
+    font-size: 3.4em;
+    line-height: 70px;
+}
+
+.why-container__sub-title {
+    font-size: 5.3rem;
+    color: var(--purple);
+    text-transform: uppercase;
+}
+
+.why-container__list {
+    width: 80%;
+    padding-top: 20px;
+}
+
+.why-container__item {
+    color: var(--purple);
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+.call-to-action--fifty-fifty {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.call-to-action__title {
+    text-align: start;
+    font-size: 3rem;
+    line-height: 40px;
+    padding: 0 0 0 30px;
+}
+
+.call-to-action__title--green {
+    color: var(--green);
 }
