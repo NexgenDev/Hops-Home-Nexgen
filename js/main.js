@@ -4,6 +4,7 @@ window.onscroll = () => {
     const menuItems = document.getElementsByClassName('menu_link')
     const socialMediaIcons = document.getElementsByClassName('social-media__icons')
     const logo = document.getElementById('logo')
+    const responsiveMenu = document.getElementById('menu_responsive')
     if (verticalScroll >= 900) {
         // switch nabvar to purple
         navbar.classList.replace('header--white', 'header--purple')
@@ -14,6 +15,7 @@ window.onscroll = () => {
             socialMediaIcons[i].classList.add('social-media__icons--green')
         }
         logo.src='images/logo-hops-alternative.png'
+        responsiveMenu.classList.add('menu__responsive--white')
         
     } else {
         // switch nabvar to white
@@ -25,6 +27,7 @@ window.onscroll = () => {
             socialMediaIcons[i].classList.remove('social-media__icons--green')
         }
         logo.src='images/logo-hops.png'
+        responsiveMenu.classList.remove('menu__responsive--white')
     }
 }
 
@@ -33,5 +36,7 @@ const addYearToWeb = () => {
     const getCurrentYear = new Date().getFullYear()
     year.innerHTML = getCurrentYear
 }
+
+const responsive = () => {}
 
 addYearToWeb()
