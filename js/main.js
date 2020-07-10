@@ -28,3 +28,10 @@ window.onscroll = () => {
     }
 }
 
+const addYearToWeb = () => {
+    const year = document.getElementById('year')
+    const getCurrentYear = new Date().getFullYear()
+    year.innerHTML = getCurrentYear
+}
+
+addYearToWeb()
