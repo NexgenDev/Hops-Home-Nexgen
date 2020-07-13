@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     font-family: Biko, Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: 20% 50% 10% 20%;
+    grid-template-columns: 25% 50% 10% 15%;
     align-items: center;
     position: fixed;
     width: 100%;
@@ -56,6 +57,7 @@ body {
 .header__menu {
     list-style: none;
 }
+
 .menu__item {
     display: inline-block;
     padding: 0 10px;
@@ -66,11 +68,19 @@ body {
     transition: color 150ms ease-in-out;
 }
 
+.menu_link:link {
+    color: var(--purple);
+}
+
 .menu_link:hover {
     color: var(--green);
 }
 
 .menu_link--green {
+    color: var(--green);
+}
+
+.menu_link--green:link {
     color: var(--green);
 }
 
@@ -83,8 +93,22 @@ body {
     color: var(--purple);
 }
 
-.menu__responsive--white {
+.menu_responsive--show {
+    position: fixed;
+    z-index: 900;
+    margin-left: -15px;
+}
+
+.menu_responsive--show > svg {
     color: var(--white);
+}
+
+.menu__responsive--white > svg {
+    color: var(--white);
+}
+
+.menu__close {
+    display: none;
 }
 
 .social-media__icons {
@@ -92,6 +116,10 @@ body {
     width: 20px;
     padding: 0 5px;
     transition: color 150ms ease-in-out;
+}
+
+.social-media__icons--instagram {
+    background-image: url('../images/instagram.svg');
 }
 
 .social-media__icons:hover {
@@ -406,10 +434,18 @@ body {
 
 .footer {
     display: flex;
-    width: 80%;
     margin: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    min-height: 300px;
+}
+
+.footer--80 {
+    width: 80%;
+}
+
+.footer--colum {
+    flex-direction: column;
 }
 
 .footer__more-info {
@@ -441,13 +477,104 @@ body {
     transition: background 200ms ease-in-out;
 }
 
+.btn:focus {
+    outline: none;
+}
+
 .btn--green {
     background: var(--green);
     color: var(--white);
+    border: 1px solid var(--white);
 }
 
 .btn--green:hover {
     background: var(--purple);
+    color: var(--green);
+}
+
+.title--capitalize {
+    text-transform: capitalize;
+}
+
+.faq {
+    padding: 110px 0px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.faq__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 80px;
+    row-gap: 60px;
+    margin: 20px 0px;
+}
+
+.faq__title {
+    color: var(--green);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.faq__paragraph {
+    color: var(--purple);
+    font-size: 1rem;
+}
+
+.faq__link {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.faq__answer:last-child {
+    grid-column: 2 / 3;
+}
+
+.footer--purple {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.title--white {
+    color: var(--white);
+}
+
+.header__menu--show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 80px;
+    top: 0;
+    right: 0;
+    background: var(--white);
+    z-index: 500;
+    height: 100vh;
+    width: 50vw;
+    background: var(--purple);
+    animation: show-menu 400ms;
+}
+
+@keyframes show-menu {
+    from {width: 0vh;}
+    to {width: 50vw;}
+}
+
+.menu__item--show {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 0px;
+    width: 90%;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.menu_link--show {
     color: var(--green);
 }
 
@@ -572,6 +699,19 @@ body {
     .footer__calendar {
         width: 60%;
     }
+
+    .faq__container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .faq__answer {
+        margin-bottom: 50px;
+    }
+
+    .footer--colum {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 425px){
@@ -636,6 +776,7 @@ body {
 
     .whatsapp-btn {
         width: 100px;
+        z-index: 50;
     }
 
     .features {
@@ -753,5 +894,18 @@ body {
 
     .footer__calendar {
         width: 95%;
+    }
+
+    .faq__container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .faq__answer {
+        margin-bottom: 50px;
+    }
+
+    .footer--colum {
+        flex-direction: column;
     }
 }

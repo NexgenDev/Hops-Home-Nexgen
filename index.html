@@ -16,15 +16,17 @@
         <img class="header__logo" id="logo" src="images/logo-hops.png" alt="Logotipo de hops latam" width="150px">
         <nav class="header__nav">
             <ul class="header__menu">
-                <li class="menu__item"><a href="" class="menu_link">Inicio</a></li>
-                <li class="menu__item"><a href="" class="menu_link">Servicios</a></li>
-                <li class="menu__item"><a href="" class="menu_link">¿Por que HOPS?</a></li>
-                <li class="menu__item"><a href="" class="menu_link">Tarifas</a></li>
-                <li class="menu__item"><a href="" class="menu_link">FAQ</a></li>
-                <li class="menu__item"><a href="" class="menu_link">Comunidad</a></li>
+                <li class="menu__item"><a href="index.html#home" class="menu_link">Inicio</a></li>
+                <li class="menu__item"><a href="index.html#services" class="menu_link">Servicios</a></li>
+                <li class="menu__item"><a href="index.html#why" class="menu_link">¿Por que HOPS?</a></li>
+                <li class="menu__item"><a href="index.html#pricing" class="menu_link">Tarifas</a></li>
+                <li class="menu__item"><a href="faq.html" class="menu_link">FAQ</a></li>
+                <li class="menu__item"><a href="comunidad.html" class="menu_link">Comunidad</a></li>
                 <li class="menu__item"><a href="" class="menu_link">Contacto</a></li>
             </ul>
-            <i class="menu__responsive" id="menu_responsive" data-feather="menu"></i>
+            <div id="menu_responsive">
+                <img class="menu__responsive" src="images/menu.svg">
+            </div>
         </nav>
         <div class="social-media">
             <a href=""><i class="social-media__icons" data-feather="instagram"></i></a>
@@ -36,7 +38,7 @@
         </a>
     </header>
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <img class="home__mockups" src="images/mockups.png" alt="">
             <div>
                 <h1 class="home__title">Software de gestión hospitalaria <br>
@@ -48,7 +50,7 @@
                     médicos para llevar tu organización a otro nivel y obtener.</p>
             </div>
         </section>
-        <a href="">
+        <a href="https://api.whatsapp.com/send?phone=573154778357&text=%F0%9F%91%8BHola%20equipo%20HOPS%20Latam%2C%0AMe%20gustar%C3%ADa%20conocer%20m%C3%A1s%20acerca%20de%20tu%20software%20de%20gesti%C3%B3n%20hospitalaria.">
             <img class="whatsapp-btn" src="images/whatsapp.png" alt="" width="150px">
         </a>
         <section class="features">
@@ -77,7 +79,7 @@
             <button class="call-to-action__button">Accede a una prueba gratis</button><br>
             <span>No somos un CRM ni un ERP/ Complementamos tu software de gestión</span>
         </div>
-        <section class="services">
+        <section class="services" id="services">
             <img class="aws-banner" src="images/aws-banner.png" alt="">
             <h2 class="title">Servicios</h2>
             <img class="separator" src="images/separator.jpg" alt="separador de titulo">
@@ -118,7 +120,7 @@
                 </div>
             </div>
         </section>
-        <section class="why">
+        <section class="why" id="why">
             <h2 class="title">¿POR QUÉ HOPS?</h2>
             <img class="separator" src="images/separator.jpg" alt="separador de titulo">
             <div class="why-container">
@@ -140,7 +142,7 @@
                 <h3 class="call-to-action__title">No te preocupes, <br>estaremos <b class="call-to-action__title--green">siempre contigo</b></h3>
             </div>
         </div>
-        <section class="pricing">
+        <section class="pricing" id="pricing">
             <h2 class="title title--white">Tarifas</h2>
             <img class="separator" src="images/separator-purple.jpg" alt="separador de titulo">
             <div class="pricing__container">
@@ -172,7 +174,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--80">
         <img class="footer__calendar" src="images/agendar.jpg" alt="" width="400px">
         <div class="footer__more-info">
             <img class="separator" src="images/separator.jpg" alt="separador de titulo"><br>
@@ -189,6 +191,7 @@
     <script>
         feather.replace()
     </script>
+    <script src="js/fbpexels.js "></script>
 </body>
 
 </html>
