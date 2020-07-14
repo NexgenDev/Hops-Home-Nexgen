@@ -263,7 +263,8 @@ body {
     justify-items: center;
     width: 55%;
     padding-top: 30px;
-    row-gap: 10px;
+    row-gap: 30px;
+    column-gap: 20px;
 }
 
 .services__title {
@@ -285,7 +286,6 @@ body {
 .services__card {
     width: 250px;
     height: 250px;
-    margin: 25px 0px;
     padding: 30px 20px;
     text-align: center;
     border-radius: 20px;
@@ -576,6 +576,118 @@ body {
 
 .menu_link--show {
     color: var(--green);
+}
+
+.menu_link--show:link {
+    color: var(--green);
+}
+
+.community {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.community__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80vw;
+}
+
+.community__articles {
+    position: static;
+    min-width: 20%;
+    padding-right: 30px;
+}
+
+.community__title {
+    color: var(--purple);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.community__article-link {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: bold;
+    transition: 100ms;
+}
+
+.community__article-link:hover {
+    color: var(--green);
+}
+
+.community__article-link:link {
+    color: var(--purple);
+}
+
+.community__article-title {
+    color: var(--purple);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.community__article {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.community__article-head {
+    padding: 50px 30px; 
+}
+
+.community__article-paragraph {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.community__article-desc {
+    font-size: 1.8rem;
+    width: 80%;
+}
+
+.community__article-sub-title {
+    font-size: 2.3rem;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.community__article-separator {
+    display: block;
+    width: 10%;
+    height: 3px;
+    background: var(--green);
+    margin: 30px 0px;
+}
+
+.community__article-autor {
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.community__article-autor-meta {
+    font-size: 1.1rem;
+}
+
+.community__article-img{
+    width: 100%;
+    margin: auto;
+}
+
+.community__article-body {
+    text-align: justify;
+}
+
+.community__article-link2 {
+    color: #9c9c9c;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
 }
 
 @media only screen and (min-width: 425px) and (max-width: 768px) {
