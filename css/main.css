@@ -36,6 +36,7 @@ body {
     box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.10);
     transition: background 500ms ease-in-out;
     min-height: 102px;
+    color: var(--purple);
 }
 
 .header--white {
@@ -530,6 +531,7 @@ body {
 .faq__link {
     color: var(--purple);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .faq__answer:last-child {
