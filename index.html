@@ -12,6 +12,28 @@
         content="Somos una plataforma gerencial de optimización de recursos en el sector salud que utiliza Inteligencia Artificial para ofrecer resultados clínicos, financieros y operativos. Nuestras soluciones en la nube conectan personal, salas, camas y datos que permiten administrar procesos médicos para llevar tu organización a otro nivel." />
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+            const openContactForm = () => {
+            var largo = 500;
+            var altura = 500;
+            var top = (screen.height - altura) / 2;
+            var izquierda = (screen.width - largo) / 2;
+            nuevaVentana = window.open(
+                "http://www.pruebashopslatam.com/formulario.html",
+                "window",
+                "width=" +
+                largo +
+                ",height=" +
+                altura +
+                ",top=" +
+                top +
+                ",left=" +
+                izquierda +
+                ",scrollbars=1"
+            );
+            nuevaVentana.focus();
+            };
+    </script>
 </head>
 
 <body>
