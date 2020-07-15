@@ -12,19 +12,6 @@
         content="Somos una plataforma gerencial de optimización de recursos en el sector salud que utiliza Inteligencia Artificial para ofrecer resultados clínicos, financieros y operativos. Nuestras soluciones en la nube conectan personal, salas, camas y datos que permiten administrar procesos médicos para llevar tu organización a otro nivel." />
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        function abrir() {
-
-            var largo = 500;
-            var altura = 500;
-            var top = (screen.height - altura) / 2;
-            var izquierda = (screen.width - largo) / 2;
-            nuevaVentana = window.open('http://app.hopslatam.com/formulario.html', 'window', 'width=' + largo +
-                ',height=' + altura + ',top=' + top + ',left=' + izquierda + ',scrollbars=1');
-            nuevaVentana.focus();
-
-        }
-    </script>
 </head>
 
 <body>
@@ -51,7 +38,7 @@
                     <a href="faq.html#community" class="menu_link">Comunidad</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu_link" target="_blank" onclick='abrir()'>Contacto</a>
+                    <a class="menu_link" href="#" target="_blank" onclick='openContactForm()'>Contacto</a>
                 </li>
             </ul>
             <div id="menu_responsive">
@@ -262,7 +249,7 @@
         </section>
     </main>
     <footer class="footer footer--80">
-        <a href="https://app.hopslatam.com/formulario.html">
+        <a href="#" onclick="openContactForm()">
             <img class="footer__calendar" src="images/agendar.jpg" alt="" width="400px" />
         </a>
         <div class="footer__more-info">
@@ -277,7 +264,6 @@
             <p><span id="year"></span> Copyright All rights reserved</p>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
     <script>
         feather.replace();
