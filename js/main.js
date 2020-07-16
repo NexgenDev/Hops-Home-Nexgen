@@ -88,3 +88,5 @@ const openContactForm = () => {
   );
   nuevaVentana.focus();
 };
+
+feather.replace();
