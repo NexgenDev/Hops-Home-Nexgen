@@ -163,8 +163,6 @@ body {
     align-items: center;
     margin: auto;
     padding: 125px 10px 20px 10px;
-    width: 90%;
-    height: 60vh;
 }
 
 .home__mockups {
@@ -186,7 +184,7 @@ body {
 }
 
 .home__paragraph {
-    width: 75%;
+    width: 80%;
     text-align: justify;
 }
 
@@ -199,7 +197,7 @@ body {
 
 .features {
     display: flex;
-    width: 100%;
+    flex: 1;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--green);
@@ -264,7 +262,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    width: 55%;
+    width: 70%;
     padding-top: 30px;
     row-gap: 30px;
     column-gap: 20px;
@@ -335,7 +333,7 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 0px 100px;
+    padding: 50px 100px;
 }
 
 .why-container__image {
@@ -344,18 +342,18 @@ body {
 
 .why-container__title {
     color: var(--white);
-    font-size: 3.4em;
+    font-size: 52px;
     line-height: 70px;
 }
 
 .why-container__sub-title {
-    font-size: 5.3rem;
+    font-size: 82px;
     color: var(--purple);
     text-transform: uppercase;
 }
 
 .why-container__list {
-    width: 80%;
+    width: 100%;
     padding-top: 20px;
 }
 
