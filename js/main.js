@@ -67,24 +67,3 @@ responsiveMenu.addEventListener("click", () => {
     menuIcon[0].src = "images/x.svg";
   }
 });
-
-const openContactForm = () => {
-  var largo = 500;
-  var altura = 500;
-  var top = (screen.height - altura) / 2;
-  var izquierda = (screen.width - largo) / 2;
-  nuevaVentana = window.open(
-    "http://app.hopslatam.com/formulario.html",
-    "window",
-    "width=" +
-      largo +
-      ",height=" +
-      altura +
-      ",top=" +
-      top +
-      ",left=" +
-      izquierda +
-      ",scrollbars=1"
-  );
-  nuevaVentana.focus();
-};
