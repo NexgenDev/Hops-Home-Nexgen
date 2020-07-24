@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="js/gootagman.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -13,13 +14,31 @@
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '282863316466543');
+        fbq('track', 'PageView');
+      </script>
+      <noscript>
+        <img height="1" width="1" style="display:none" 
+             src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1"/>
+      </noscript>
+    <script>
+
+        
         const openContactForm = () => {
             var largo = 500;
-            var altura = 500;
+            var altura = 500;   
             var top = (screen.height - altura) / 2;
             var izquierda = (screen.width - largo) / 2;
             nuevaVentana = window.open(
-                "http://www.pruebashopslatam.com/formulario.html",
+                "https://app.hopslatam.com/formulario.html",
                 "window",
                 "width=" +
                 largo +
@@ -34,10 +53,11 @@
             nuevaVentana.focus();
         };
     </script>
-    <script src="js/gootagman.js"></script>
 </head>
 
 <body>
+    <noscript></noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNS6WT8" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
     <header class="header header--white" id="header">
         <img class="header__logo" id="logo" src="images/logo-hops.png" alt="Logotipo de hops latam" width="150px" />
         <nav class="header__nav">
@@ -61,8 +81,7 @@
                     <a href="faq.html#community" class="menu_link">Comunidad</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu_link" target="_blank"
-                        href="https://api.whatsapp.com/send?phone=573154778357&text=%F0%9F%91%8BHola%20equipo%20HOPS%20Latam%2C%0AMe%20gustar%C3%ADa%20conocer%20m%C3%A1s%20acerca%20de%20tu%20software%20de%20gesti%C3%B3n%20hospitalaria.">Contacto</a>
+                    <a class="menu_link" target="_blank" onclick="openContactForm()">Contacto</a>
                 </li>
             </ul>
             <div id="menu_responsive">
@@ -288,14 +307,18 @@
             <img src="images/logo-hops.png" alt="Logotipo de hops latam" width="300px" /><br />
             <p><span id="year"></span> Copyright All rights reserved</p>
         </div>
+
+        
     </footer>
+    <div class="footer__dir">
+        <p>Calle 147 # 7G-30 / Línea  de Atención : +57 315 4778357/ Bogotá Colombia</p>
+    </div>
     <script src="js/main.js"></script>
     <script>
         feather.replace();
-    </script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNS6WT8" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <script src="js/fbpexels.js "></script>
+    </script>   
+   
+    <script src="js/mouseflow.js "></script>
 </body>
 
 </html>
